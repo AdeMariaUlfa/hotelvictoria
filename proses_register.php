@@ -3,7 +3,7 @@
     if(isset($_POST['submit'])){
 	$name = $_POST['name'];
 	$username = $_POST['username'];
-	$password = md5($_POST['password']);
+	$password = ($_POST['password']);
 	$noHp = $_POST['noHp'];
 	$jk = $_POST['jk'];
 	$alamat = $_POST['alamat'];

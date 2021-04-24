@@ -130,13 +130,15 @@
             </div>
         </div>
     </div>
-    <?php 
+
+<!-- membuat proses login -->
+<?php 
 include 'koneksi.php';
 //menangkap data yang dikirim dari form login
 
 if(isset($_POST["submit"])){//jika tombol login di klik
 	$username=$_POST["username"];
-	$password=md5($_POST["password"]);
+	$password=($_POST["password"]);
 
 	if($username!="" && $password!=""){
 		
@@ -154,14 +156,14 @@ if(isset($_POST["submit"])){//jika tombol login di klik
 		else // username dan password cocok
 		{	
 			$_SESSION["username"]=$data["username"];
-			$_SESSION["password"]=md5($data["password"]);
+			$_SESSION["password"]=$data["password"];
 			$_SESSION["idCust"]=$data["idCust"];
 			$_SESSION["name"]=$data["name"];
 			$_SESSION["noHp"]=$data["noHp"];
 			$_SESSION["email"]=$data["email"];
 			
 			// arahkan ke halaman index pasca login
-			echo "<script> alert('selamat datang ".$_SESSION['name']."'); window.location.href='index.html'; </script>";
+			echo "<script> alert('selamat datang ".$_SESSION['name']."'); window.location.href='index.php?page=home'; </script>";
 		}
 	}
 	else
