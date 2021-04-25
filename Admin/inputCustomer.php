@@ -61,10 +61,7 @@
                             <!--End Logo icon -->
                             <!-- Logo text -->
                             <span class="logo-text">
-                                <!-- dark Logo text -->
-                                <img src="assets/images/logo-text.png" alt="homepage" class="dark-logo" />
-                                <!-- Light Logo text -->
-                                <img src="assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                                <span>Hotel Victoria</span>
                             </span>
                         </a>
                     </div>
@@ -183,10 +180,7 @@
                                 <div class="customize-input">
                                     <select
                                         class="custom-select form-control bg-white custom-radius custom-shadow border-0">
-                                        <option selected>EN</option>
-                                        <option value="1">AB</option>
-                                        <option value="2">AK</option>
-                                        <option value="3">BE</option>
+                                        <option selected>INA</option>
                                     </select>
                                 </div>
                             </a>
@@ -199,17 +193,7 @@
                         <!-- ============================================================== -->
                         <!-- Search -->
                         <!-- ============================================================== -->
-                        <li class="nav-item d-none d-md-block">
-                            <a class="nav-link" href="javascript:void(0)">
-                                <form>
-                                    <div class="customize-input">
-                                        <input class="form-control custom-shadow custom-radius border-0 bg-white"
-                                            type="search" placeholder="Search" aria-label="Search">
-                                        <i class="form-control-icon" data-feather="search"></i>
-                                    </div>
-                                </form>
-                            </a>
-                        </li>
+                        
                         <!-- ============================================================== -->
                         <!-- User profile and search -->
                         <!-- ============================================================== -->
@@ -263,70 +247,27 @@
             <div class="scroll-sidebar" data-sidebarbg="skin6">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                    <ul id="sidebarnav" >
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="indexAdmin.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
-                        <!-- <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Applications</span></li>
-
-                        <li class="sidebar-item"> <a class="sidebar-link" href="ticket-list.html"
-                                aria-expanded="false"><i data-feather="tag" class="feather-icon"></i><span
-                                    class="hide-menu">Ticket List
-                                </span></a>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-chat.html"
-                                aria-expanded="false"><i data-feather="message-square" class="feather-icon"></i><span
-                                    class="hide-menu">Chat</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="app-calendar.html"
-                                aria-expanded="false"><i data-feather="calendar" class="feather-icon"></i><span
-                                    class="hide-menu">Calendar</span></a></li> -->
-
                         <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Components</span></li>
+                        <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
-                                    class="hide-menu">Forms </span></a>
+                                    class="hide-menu">Kamar </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Inputs
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-input-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> Form Grids
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="form-checkbox-radio.html" class="sidebar-link"><span
-                                            class="hide-menu"> Checkboxes &
-                                            Radios
+                                            class="hide-menu"> Data Kamar
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="grid" class="feather-icon"></i><span
-                                    class="hide-menu">Taransaksi </span></a>
+                                    class="hide-menu">Transaksi </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <!-- <li class="sidebar-item"><a href="table-basic.html" class="sidebar-link"><span
-                                            class="hide-menu"> Basic Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-dark-basic.html" class="sidebar-link"><span
-                                            class="hide-menu"> Dark Basic Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-sizing.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Sizing Table
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="table-layout-coloured.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Coloured
-                                            Table Layout
-                                        </span></a>
-                                </li> -->
-                                <li class="sidebar-item"><a href="Tabeltransaksi.html" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="Tabeltransaksi.php" class="sidebar-link"><span
                                             class="hide-menu">
                                             Data Transaksi
                                         </span></a>
@@ -335,73 +276,27 @@
                         </li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="bar-chart" class="feather-icon"></i><span
-                                    class="hide-menu">Charts </span></a>
+                                    class="hide-menu">Customer </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="chart-morris.html" class="sidebar-link"><span
-                                            class="hide-menu"> Morris Chart
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="chart-chart-js.html" class="sidebar-link"><span
-                                            class="hide-menu"> ChartJs
-                                        </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="chart-knob.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Knob Chart
+                                <li class="sidebar-item"><a href="tabelCustomer.php" class="sidebar-link"><span
+                                            class="hide-menu">Data Customer
                                         </span></a>
                                 </li>
                             </ul>
                         </li>
+
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="box" class="feather-icon"></i><span
-                                    class="hide-menu">UI Elements </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level base-level-line">
+                                    class="hide-menu">Cetak Laporan </span></a>
+                                    <ul aria-expanded="false" class="collapse  first-level base-level-line">
                                 <li class="sidebar-item"><a href="ui-buttons.html" class="sidebar-link"><span
-                                            class="hide-menu"> Buttons
+                                            class="hide-menu"> Laporan Bulanan
                                         </span></a>
                                 </li>
                                 <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
-                                            class="hide-menu"> Modals </span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ui-tab.html" class="sidebar-link"><span
-                                            class="hide-menu"> Tabs </span></a></li>
-                                <li class="sidebar-item"><a href="ui-tooltip-popover.html" class="sidebar-link"><span
-                                            class="hide-menu"> Tooltip &
-                                            Popover</span></a></li>
-                                <li class="sidebar-item"><a href="ui-notification.html" class="sidebar-link"><span
-                                            class="hide-menu">Notification</span></a></li>
-                                <li class="sidebar-item"><a href="ui-progressbar.html" class="sidebar-link"><span
-                                            class="hide-menu">Progressbar</span></a></li>
-                                <li class="sidebar-item"><a href="ui-typography.html" class="sidebar-link"><span
-                                            class="hide-menu">Typography</span></a></li>
-                                <li class="sidebar-item"><a href="ui-bootstrap.html" class="sidebar-link"><span
-                                            class="hide-menu">Bootstrap
-                                            UI</span></a></li>
-                                <li class="sidebar-item"><a href="ui-breadcrumb.html" class="sidebar-link"><span
-                                            class="hide-menu">Breadcrumb</span></a></li>
-                                <li class="sidebar-item"><a href="ui-list-media.html" class="sidebar-link"><span
-                                            class="hide-menu">List
-                                            Media</span></a></li>
-                                <li class="sidebar-item"><a href="ui-grid.html" class="sidebar-link"><span
-                                            class="hide-menu"> Grid </span></a></li>
-                                <li class="sidebar-item"><a href="ui-carousel.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Carousel</span></a></li>
-                                <li class="sidebar-item"><a href="ui-scrollspy.html" class="sidebar-link"><span
-                                            class="hide-menu">
-                                            Scrollspy</span></a></li>
-                                <li class="sidebar-item"><a href="ui-toasts.html" class="sidebar-link"><span
-                                            class="hide-menu"> Toasts</span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="ui-spinner.html" class="sidebar-link"><span
-                                            class="hide-menu"> Spinner </span></a>
+                                            class="hide-menu"> Laporan Tahunan </span></a>
                                 </li>
                             </ul>
-                        </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="ui-cards.html"
-                                aria-expanded="false"><i data-feather="sidebar" class="feather-icon"></i><span
-                                    class="hide-menu">Cards
-                                </span></a>
                         </li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Authentication</span></li>
@@ -411,64 +306,6 @@
                                     class="hide-menu">Login
                                 </span></a>
                         </li>
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link"
-                                href="authentication-register1.html" aria-expanded="false"><i data-feather="lock"
-                                    class="feather-icon"></i><span class="hide-menu">Register
-                                </span></a>
-                        </li>
-<!-- 
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="feather" class="feather-icon"></i><span
-                                    class="hide-menu">Icons
-                                </span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="icon-fontawesome.html" class="sidebar-link"><span
-                                            class="hide-menu"> Fontawesome Icons </span></a></li>
-
-                                <li class="sidebar-item"><a href="icon-simple-lineicon.html" class="sidebar-link"><span
-                                            class="hide-menu"> Simple Line Icons </span></a></li>
-                            </ul>
-                        </li> -->
-
-                        <!-- <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
-                                aria-expanded="false"><i data-feather="crosshair" class="feather-icon"></i><span
-                                    class="hide-menu">Multi
-                                    level
-                                    dd</span></a>
-                            <ul aria-expanded="false" class="collapse first-level base-level-line">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item 1.1</span></a>
-                                </li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item 1.2</span></a>
-                                </li>
-                                <li class="sidebar-item"> <a class="has-arrow sidebar-link" href="javascript:void(0)"
-                                        aria-expanded="false"><span class="hide-menu">Menu 1.3</span></a>
-                                    <ul aria-expanded="false" class="collapse second-level base-level-line">
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.1</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.2</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.3</span></a></li>
-                                        <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                                    class="hide-menu"> item
-                                                    1.3.4</span></a></li>
-                                    </ul>
-                                </li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><span
-                                            class="hide-menu"> item
-                                            1.4</span></a></li>
-                            </ul>
-                        </li> -->
-                        <li class="list-divider"></li>
-                        <li class="nav-small-cap"><span class="hide-menu">Extra</span></li>
-                        <!-- <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="docs/docs.html"
-                                aria-expanded="false"><i data-feather="edit-3" class="feather-icon"></i><span
-                                    class="hide-menu">Documentation</span></a></li> -->
                         <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="authentication-login1.html"
                                 aria-expanded="false"><i data-feather="log-out" class="feather-icon"></i><span
                                     class="hide-menu">Logout</span></a></li>
@@ -491,12 +328,12 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Basic Initialisation</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Customer</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="tabelCustomer.php" class="text-muted">Menu</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Customer</li>
                                 </ol>
                             </nav>
                         </div>
@@ -514,76 +351,103 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
+            <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Masukkan Data-Data Berikut</h4>
+                                <form action="#">
+                                    <div class="form-body">
+                                        <div class="form-group row">
+                                            <label class="col-md-2">Nama </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan nama lengkap">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Username </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan username">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Password </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="masukkan password">
+                                                            <small id="passwordHelpBlock" class="form-text text-muted">
+                                                            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                                                            </small>
+                                                        
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">No HP </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan no hp">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Jenis Kelamin </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Perempuan</option>
+                                                    <option value="2">Laki-Laki</option>
+                                                    <option value="3">Lainnya</option>
+                                                    </select>
+                                                    </div>
+                                            </div><br><br>
+                                            <label class="col-md-2">Alamat </label>
+                                            <div class="col-sm-12 col-md-10 col-lg-10">
+                                                <div class="col-md">
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" rows="3" placeholder="Text Here..."></textarea>
+                                                                <small id="textHelp" class="form-text text-muted">Tuliskan Alamat Dengan Lengkap</small>
+                                                            </div>
+                                                        </form>
+                                                </div>
+                                            </div><br><br>
+                                            <label class="col-md-2">Email </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan email">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
+                                    <div class="form-actions">
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="reset" class="btn btn-dark">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <!-- basic table -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            
-                                <!-- <table width="30%" border="1" class="table table-bordered table-striped"> -->
-                            <div class="card-body">
-                                <h4 class="card-title">Data Transaksi</h4>
-                                
-                                    <div class="form-body">
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Transaksi</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Kamar</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Transaksi</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                     
-                            
-                             
-                            
-                                                        
-                                                        
-                                                    <div class="form-actions">
-                                                        <div class="text-right">
-                                                            <button type="submit" class="btn btn-info">Submit</button>
-                                                            <button type="reset" class="btn btn-dark">Reset</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                   
-                               
-                <!--  -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-            </div>
+                
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
