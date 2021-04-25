@@ -13,8 +13,17 @@
                         <div class="header__top__right">
                             <div class="header__top__auth">
                                 <ul>
-                                    <li><a href="login.php">Login</a></li>
-                                    <li><a href="register.php">Register</a></li>
+                                <?php 
+                                if (@$_SESSION["username"]==""){
+                                ?>
+                                    <li class="<?php $aktif = ($_GET['page']=='login') ? 'active' : ''; echo $aktif; ?>"><a href="login.php">Login</a></li>
+                                    <li class="<?php $aktif = ($_GET['page']=='register') ? 'active' : ''; echo $aktif; ?>"><a href="register.php">Register</a></li>
+                                <?php 
+                                    } else { ?>
+                                <li><a href="logout.php">Logout</a></li>
+                                <?php 
+                                    }
+                                ?>
                                 </ul>
                             </div>
                         </div>
@@ -34,9 +43,9 @@
                         <div class="header__nav">
                             <nav class="header__menu">
                                 <ul class="menu__class">
-                                    <li class="active"><a href="./index.html">Home</a></li>
+                                    <li class="active"><a href="./index.php">Home</a></li>
                                     <li><a href="./rooms.php">Rooms</a></li>
-                                    <li><a href="./about.html">About Us</a></li>
+                                    <li><a href="./about.php">About Us</a></li>
                                 </ul>
                             </nav>
                             <div class="header__nav__widget">
