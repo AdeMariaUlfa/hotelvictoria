@@ -23,9 +23,9 @@
                         <div class="footer__widget">
                             <h4>Quick Link</h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="rooms.html">Room</a></li>
-                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="index.php">Home</a></li>
+                                <li><a href="rooms.php">Room</a></li>
+                                <li><a href="about.php">About Us</a></li>
                                 <li><a href="booking.php">Booking</a></li>
                             </ul>
                         </div>
