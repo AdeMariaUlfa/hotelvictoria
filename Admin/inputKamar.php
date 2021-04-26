@@ -1,8 +1,27 @@
-<?php include 'koneksiAdmin.php'; ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html dir="ltr" lang="en">
 
-<?php include 'headAdmin.php';?>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
+    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
+    <!-- This page plugin CSS -->
+    <link href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="dist/css/style.min.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+</head>
 
 <body>
     <!-- ============================================================== -->
@@ -228,17 +247,17 @@
             <div class="scroll-sidebar" data-sidebarbg="skin6">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav">
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
+                    <ul id="sidebarnav" >
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="indexAdmin.php"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Menu</span></a></li>
+                                    class="hide-menu">Dashboard</span></a></li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Kamar </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="tabelKamar.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
                                             class="hide-menu"> Data Kamar
                                         </span></a>
                                 </li>
@@ -309,19 +328,14 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tabel Data Customer</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Kamar</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="indexAdmin.php" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Customer</li>
+                                    <li class="breadcrumb-item"><a href="tabelCustomer.php" class="text-muted">Menu</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Kamar</li>
                                 </ol>
                             </nav>
-                        </div>
-                    </div>
-                    <div class="col-5 align-self-center">
-                        <div class="customize-input float-right">
-                            <A href="inputCustomer.php" class="btn btn-primary">Tambah Data</a>
                         </div>
                     </div>
                 </div>
@@ -332,67 +346,160 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
-                <!-- ============================================================== -->
-                <!-- Start Page Content -->
-                <!-- ============================================================== -->
-                <!-- basic table -->
-                <div class="row">
+            <div class="row">
                     <div class="col-12">
                         <div class="card">
-                            
-                                <!-- <table width="30%" border="1" class="table table-bordered table-striped"> -->
                             <div class="card-body">
-                                <h4 class="card-title">Data Customer</h4>
-                                <!-- <h6 class="card-subtitle">DataTables has most features enabled by default, so all you
-                                    need to do to use it with your own tables is to call the construction
-                                    function:<code> $().DataTable();</code>. You can refer full documentation from here
-                                    <a href="https://datatables.net/">Datatables</a></h6> -->
-                                <div class="table-responsive">
-                                    <table id="zero_config" class="table table-striped table-bordered no-wrap">
-                                        <thead>
-                                            <tr>
-                                                <th>id customer</th>
-                                                <th>nama</th>
-                                                <th>username</th>
-                                                <th>password</th>
-                                                <th>no hp</th>
-                                                <th>alamat</th>
-                                                <th>email</th>
-                                                <th>aksi</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                           <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td align="center">
-                                                <a href="index.php?module=edittransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-success">Edit</a>
-                                                <a href="index.php?module=hapustransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-danger">Hapus</a>
-                                                </td>
-                                            </tr>
-                                    </table>
-                                </div>
+                                <h4 class="card-title">Masukkan Data-Data Berikut</h4>
+                                <form action="" method="POST">
+                                    <div class="form-body">
+                                        <div class="form-group row">
+                                            <label class="col-md-2">Jenis Kamar </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "jenisKamar">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Tipe Bed </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "tipeBed" >
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Size </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "size">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Kapasitas </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "kapasitas">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Jumlah Kamar </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "jmlhKamar">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Fasilitas </label>
+                                            <div class="col-sm-12 col-md-10 col-lg-10">
+                                                <div class="col-md">
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" name = "fasilitas" rows="3" placeholder="Text Here..."></textarea>
+                                                            </div>
+                                                        </form>
+                                                </div>
+                                            </div><br><br>
+                                            <label class="col-md-2">Harga Kamar </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "hargaKamar">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Harga Breakfast </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "hargaBreakfast">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Check In Time </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="time" class="form-control" name = "checkinTime">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Check Out Time </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="time" class="form-control" name = "checkoutTime">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Image </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "image">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-actions">
+                                        <div class="text-right">
+                                            <input type="submit" class="btn btn-info" name = "submit" value = "SIMPAN">
+                                            <input type="reset" class="btn btn-dark" name = "reset" value = "RESET">
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <?php
+                                // Check If form submitted, insert form data into users table.
+                                include "koneksiAdmin.php";
+                                if(isset($_POST['submit'])) {
+                                    $jenisKamar = $_POST['jenisKamar'];
+                                    $tipeBed = $_POST['tipeBed'];
+                                    $size = $_POST['size'];
+                                    $kapasitas = $_POST['kapasitas'];
+                                    $jmlhKamar = $_POST['jmlhKamar'];
+                                    $fasilitas = $_POST['fasilitas'];
+                                    $hargaKamar = $_POST['hargaKamar'];
+                                    $hargaBreakfast = $_POST['hargaBreakfast'];
+                                    $checkinTime = $_POST['checkinTime'];
+                                    $checkoutTime = $_POST['checkoutTime'];
+                                    $image = $_POST['image'];
+
+                                    $q = mysqli_query($conn, "INSERT INTO kamar(jenisKamar,tipeBed,size,kapasitas,jmlhKamar,fasilitas,hargaKamar,hargaBreakfast,checkinTime,checkoutTime,image) VALUES('$jenisKamar','$tipeBed','$size','$kapasitas','$jmlhKamar','$fasilitas','$hargaKamar,'$hargaBreakfast','$checkinTime','$checkoutTime','$image')");
+		
+                                    if ($q) {
+                                        echo "<script>alert('Data Berhasil Di simpan');
+                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
+                                    }else {
+                                        echo "<script>alert('Data Gagal Disimpan!');
+                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
                 </div>
-                <!--  -->
                 <!-- ============================================================== -->
-                <!-- End PAge Content -->
+                <!-- Start Page Content -->
                 <!-- ============================================================== -->
-            </div>
+                <!-- basic table -->
+                
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
+            <footer class="footer text-center text-muted">
+                All Rights Reserved by Adminmart. Designed and Developed by <a
+                    href="https://wrappixel.com">WrapPixel</a>.
+            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
