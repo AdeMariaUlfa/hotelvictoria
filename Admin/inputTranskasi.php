@@ -328,21 +328,17 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Basic Initialisation</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Transaksi</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html" class="text-muted">Home</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item"><a href="tabelCustomer.php" class="text-muted">Menu</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Tambah data Transaksi</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div class="col-5 align-self-center">
-                        <!-- <div class="customize-input float-right">
-                            <A href="index.php?module=inputtransaksi" class="btn btn-primary">Tambah Data</a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -351,76 +347,154 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="container-fluid">
+            <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Input Transaksi</h4>
+                                <form action="#">
+                                    <div class="form-body">
+                                        <div class="form-group row">
+                                        <label class="col-md-2">Id Transaksi </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    </select>
+                                                    </div>
+                                            </div><br><br>
+
+                                        <label class="col-md-2">Id Kamar </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    </select>
+                                                    </div>
+                                            </div><br><br>
+                                        <label class="col-md-2">Id Customer</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">1</option>
+                                                    <option value="2">2</option>
+                                                    <option value="3">3</option>
+                                                    </select>
+                                                    </div>
+                                            </div><br><br>
+                                          
+                                            <label class="col-md-2">Tanggal Checkin </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                        <input type="date" name="tgl_masuk" id="">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Tanggal Cekout</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                        <input type="date" name="tgl_masuk" id="">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Jumlah Orang </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan jumlah orang">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">No Ktp</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan no Ktp">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">E-mail</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan Email">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">No Hp </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan No hp">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Nama</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan Nama">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Breakfast</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <option selected>Choose...</option>
+                                                    <option value="1">Yes</option>
+                                                    <option value="2">No</option>
+                                                    </select>
+                                                    </div>
+                                            </div><br><br>
+                                            <label class="col-md-2">Total Biaya</label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control"
+                                                                placeholder="masukkan Total Biaya">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Bukti Pembayaran </label>
+                                            <div class="custom-file mb-2">
+                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                        </div>
+    
+                                    </div>
+                                       
+                                    </div>
+                                    <div class="form-actions">
+                                        <div class="text-right">
+                                            <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="reset" class="btn btn-dark">Reset</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <!-- basic table -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            
-                                <!-- <table width="30%" border="1" class="table table-bordered table-striped"> -->
-                            <div class="card-body">
-                                <h4 class="card-title">Data Transaksi</h4>
-                                
-                                    <div class="form-body">
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Transaksi</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Kamar</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-group row">
-                                            <label class="col-md-2">id Transaksi</label>
-                                            <div class="col-md-10">
-                                                <div class="row">
-                                                    </div>
-                                                    <div class="col-md-2">
-                                                            <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        
-                                     
-                            
-                             
-                            
-                                                        
-                                                        
-                                                    <div class="form-actions">
-                                                        <div class="text-right">
-                                                            <button type="submit" class="btn btn-info">Submit</button>
-                                                            <button type="reset" class="btn btn-dark">Reset</button>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                   
-                               
-                <!--  -->
-                <!-- ============================================================== -->
-                <!-- End PAge Content -->
-                <!-- ============================================================== -->
-            </div>
+                
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
