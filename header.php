@@ -1,4 +1,4 @@
-<?php session_start();?>
+
 <header class="header">
         <div class="header__top">
             <div class="container">
