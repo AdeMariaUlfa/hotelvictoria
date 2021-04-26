@@ -1,27 +1,7 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="zxx">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- Tell the browser to be responsive to screen width -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon.png">
-    <title>Adminmart Template - The Ultimate Multipurpose admin template</title>
-    <!-- This page plugin CSS -->
-    <link href="assets/extra-libs/datatables.net-bs4/css/dataTables.bootstrap4.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link href="dist/css/style.min.css" rel="stylesheet">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-</head>
+<?php include 'headAdmin.php';?>
 
 <body>
     <!-- ============================================================== -->
@@ -247,10 +227,10 @@
             <div class="scroll-sidebar" data-sidebarbg="skin6">
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
-                    <ul id="sidebarnav" >
-                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="indexAdmin.php"
+                    <ul id="sidebarnav">
+                        <li class="sidebar-item"> <a class="sidebar-link sidebar-link" href="index.html"
                                 aria-expanded="false"><i data-feather="home" class="feather-icon"></i><span
-                                    class="hide-menu">Dashboard</span></a></li>
+                                    class="hide-menu">Menu</span></a></li>
                         <li class="list-divider"></li>
                         <li class="nav-small-cap"><span class="hide-menu">Menu</span></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow" href="javascript:void(0)"
@@ -328,17 +308,21 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Transaksi</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tabel Data Kamar</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="tabelCustomer.php" class="text-muted">Menu</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Tambah data Transaksi</li>
+                                    <li class="breadcrumb-item"><a href="indexAdmin.php" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Kamar</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
                     <div class="col-5 align-self-center">
+                        <div class="customize-input float-right">
+                            <A href="inputKamar.php" class="btn btn-primary">Tambah Data</a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -347,164 +331,90 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
-            <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Input Transaksi</h4>
-                                <form action="#">
-                                    <div class="form-body">
-                                        <div class="form-group row">
-                                        <label class="col-md-2">Id Transaksi </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-
-                                        <label class="col-md-2">Id Kamar </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                        <label class="col-md-2">Id Customer</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                          
-                                            <label class="col-md-2">Tanggal Checkin </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                        <input type="date" name="tgl_masuk" id="">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Tanggal Cekout</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                        <input type="date" name="tgl_masuk" id="">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Jumlah Orang </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan jumlah orang">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">No Ktp</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan no Ktp">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">E-mail</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Email">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">No Hp </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan No hp">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Nama</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Nama">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Breakfast</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">Yes</option>
-                                                    <option value="2">No</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                            <label class="col-md-2">Total Biaya</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Total Biaya">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Bukti Pembayaran </label>
-                                            <div class="custom-file mb-2">
-                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                        <label class="custom-file-label" for="customFile">Choose file</label>
-                                        </div>
-    
-                                    </div>
-                                       
-                                    </div>
-                                    <div class="form-actions">
-                                        <div class="text-right">
-                                            <button type="submit" class="btn btn-info">Submit</button>
-                                            <button type="reset" class="btn btn-dark">Reset</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="container-fluid">
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
                 <!-- basic table -->
-                
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            
+                                <!-- <table width="30%" border="1" class="table table-bordered table-striped"> -->
+                            <div class="card-body">
+                                <h4 class="card-title">Data Kamar</h4>
+                                <!-- <h6 class="card-subtitle">DataTables has most features enabled by default, so all you
+                                    need to do to use it with your own tables is to call the construction
+                                    function:<code> $().DataTable();</code>. You can refer full documentation from here
+                                    <a href="https://datatables.net/">Datatables</a></h6> -->
+                                <div class="table-responsive">
+                                    <table id="zero_config" class="table table-striped table-bordered no-wrap">
+                                        <thead>
+                                            <tr>
+                                                <th>No</th>
+                                                <th>Id Kamar</th>
+                                                <th>Jenis Kamar</th>
+                                                <th>Tipe Bed</th>
+                                                <th>Size</th>
+                                                <th>Kapasiatas</th>
+                                                <th>Jumlah Kamar</th>
+                                                <th>Fasilitas</th>
+                                                <th>Harga Kamar</th>
+                                                <th>Harga Breakfasr</th>
+                                                <th>Check In Time</th>
+                                                <th>Check Out Time</th>
+                                                <th>Image</th>
+                                                <th>Aksi</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                           <tr>
+                                           <?php  
+                                            include "koneksiAdmin.php";
+                                            $sql = mysqli_query($conn,"select * from kamar");
+                                            $no=1;
+                                            while($row=mysqli_fetch_array($sql)){
+
+                                           ?>
+                                            <td align="center"><?php echo $no; ?></td>
+                                            <td align="center"><?php echo $row['idKamar'] ?> </td>
+                                            <td align="center"><?php echo $row['jenisKamar'] ?> </td>
+                                            <td align="center"><?php echo $row['tipeBed'] ?> </td>
+                                            <td align="center"><?php echo $row['size'] ?> </td>
+                                            <td align="center"><?php echo $row['kapasitas'] ?> </td>
+                                            <td align="center"><?php echo $row['jmlhKamar'] ?> </td>
+                                            <td align="center"><?php echo $row['fasilitas'] ?> </td>
+                                            <td align="center"><?php echo $row['hargaKamar'] ?> </td>
+                                            <td align="center"><?php echo $row['hargaBreakfast'] ?> </td>
+                                            <td align="center"><?php echo $row['checkinTime'] ?> </td>
+                                            <td align="center"><?php echo $row['checkoutTime'] ?> </td>
+                                            <td align="center"><?php echo $row['image'] ?> </td>
+                                            <td align="center">
+                                                <a href="index.php?module=editKamar&idKamar=<?php echo $row['idKamar'];?>"class="btn btn-success">Edit</a>
+                                                <a href="index.php?module=hapusKamar&idKamar=<?php echo $row['idKamar'];?>"class="btn btn-danger">Hapus</a>
+                                                </td>
+                                            </tr>
+                                            <?php 
+                                                $no++;
+                                                }
+                                            ?>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--  -->
+                <!-- ============================================================== -->
+                <!-- End PAge Content -->
+                <!-- ============================================================== -->
+            </div>
             <!-- ============================================================== -->
             <!-- End Container fluid  -->
             <!-- ============================================================== -->
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center text-muted">
-                All Rights Reserved by Adminmart. Designed and Developed by <a
-                    href="https://wrappixel.com">WrapPixel</a>.
-            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->

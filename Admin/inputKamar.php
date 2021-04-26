@@ -257,7 +257,7 @@
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Kamar </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="tabelKamar.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
                                             class="hide-menu"> Data Kamar
                                         </span></a>
                                 </li>
@@ -328,17 +328,16 @@
             <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-7 align-self-center">
-                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Transaksi</h4>
+                        <h4 class="page-title text-truncate text-dark font-weight-medium mb-1">Tambah Data Kamar</h4>
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
                                     <li class="breadcrumb-item"><a href="tabelCustomer.php" class="text-muted">Menu</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Tambah data Transaksi</li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Kamar</li>
                                 </ol>
                             </nav>
                         </div>
                     </div>
-                    <div class="col-5 align-self-center">
                 </div>
             </div>
             <!-- ============================================================== -->
@@ -351,141 +350,137 @@
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Input Transaksi</h4>
-                                <form action="#">
+                                <h4 class="card-title">Masukkan Data-Data Berikut</h4>
+                                <form action="" method="POST">
                                     <div class="form-body">
                                         <div class="form-group row">
-                                        <label class="col-md-2">Id Transaksi </label>
+                                            <label class="col-md-2">Jenis Kamar </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "jenisKamar">
+                                                        </div>
                                                     </div>
+                                            </div>
+                                            <label class="col-md-2">Tipe Bed </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="text" class="form-control" name = "tipeBed" >
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Size </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "size">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Kapasitas </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "kapasitas">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Jumlah Kamar </label>
+                                            <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="form-group">
+                                                            <input type="number" class="form-control" name = "jmlhKamar">
+                                                        </div>
+                                                    </div>
+                                            </div>
+                                            <label class="col-md-2">Fasilitas </label>
+                                            <div class="col-sm-12 col-md-10 col-lg-10">
+                                                <div class="col-md">
+                                                        <form>
+                                                            <div class="form-group">
+                                                                <textarea class="form-control" name = "fasilitas" rows="3" placeholder="Text Here..."></textarea>
+                                                            </div>
+                                                        </form>
+                                                </div>
                                             </div><br><br>
-
-                                        <label class="col-md-2">Id Kamar </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                        <label class="col-md-2">Id Customer</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">1</option>
-                                                    <option value="2">2</option>
-                                                    <option value="3">3</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                          
-                                            <label class="col-md-2">Tanggal Checkin </label>
+                                            <label class="col-md-2">Harga Kamar </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                        <input type="date" name="tgl_masuk" id="">
+                                                            <input type="number" class="form-control" name = "hargaKamar">
                                                         </div>
                                                     </div>
                                             </div>
-                                            <label class="col-md-2">Tanggal Cekout</label>
+                                            <label class="col-md-2">Harga Breakfast </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                        <input type="date" name="tgl_masuk" id="">
+                                                            <input type="number" class="form-control" name = "hargaBreakfast">
                                                         </div>
                                                     </div>
                                             </div>
-                                            <label class="col-md-2">Jumlah Orang </label>
+                                            <label class="col-md-2">Check In Time </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan jumlah orang">
+                                                            <input type="time" class="form-control" name = "checkinTime">
                                                         </div>
                                                     </div>
                                             </div>
-                                            <label class="col-md-2">No Ktp</label>
+                                            <label class="col-md-2">Check Out Time </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan no Ktp">
+                                                            <input type="time" class="form-control" name = "checkoutTime">
                                                         </div>
                                                     </div>
                                             </div>
-                                            <label class="col-md-2">E-mail</label>
+                                            <label class="col-md-2">Image </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Email">
+                                                            <input type="text" class="form-control" name = "image">
                                                         </div>
                                                     </div>
                                             </div>
-                                            <label class="col-md-2">No Hp </label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan No hp">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Nama</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Nama">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Breakfast</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
-                                                    <option selected>Choose...</option>
-                                                    <option value="1">Yes</option>
-                                                    <option value="2">No</option>
-                                                    </select>
-                                                    </div>
-                                            </div><br><br>
-                                            <label class="col-md-2">Total Biaya</label>
-                                            <div class="col-md-10">
-                                                    <div class="col-md">
-                                                        <div class="form-group">
-                                                            <input type="text" class="form-control"
-                                                                placeholder="masukkan Total Biaya">
-                                                        </div>
-                                                    </div>
-                                            </div>
-                                            <label class="col-md-2">Bukti Pembayaran </label>
-                                            <div class="custom-file mb-2">
-                                        <input type="file" class="custom-file-input" id="customFile" name="filename">
-                                        <label class="custom-file-label" for="customFile">Choose file</label>
                                         </div>
-    
-                                    </div>
-                                       
                                     </div>
                                     <div class="form-actions">
                                         <div class="text-right">
-                                            <button type="submit" class="btn btn-info">Submit</button>
-                                            <button type="reset" class="btn btn-dark">Reset</button>
+                                            <input type="submit" class="btn btn-info" name = "submit" value = "SIMPAN">
+                                            <input type="reset" class="btn btn-dark" name = "reset" value = "RESET">
                                         </div>
                                     </div>
                                 </form>
+
+                                <?php
+                                // Check If form submitted, insert form data into users table.
+                                include "koneksiAdmin.php";
+                                if(isset($_POST['submit'])) {
+                                    $jenisKamar = $_POST['jenisKamar'];
+                                    $tipeBed = $_POST['tipeBed'];
+                                    $size = $_POST['size'];
+                                    $kapasitas = $_POST['kapasitas'];
+                                    $jmlhKamar = $_POST['jmlhKamar'];
+                                    $fasilitas = $_POST['fasilitas'];
+                                    $hargaKamar = $_POST['hargaKamar'];
+                                    $hargaBreakfast = $_POST['hargaBreakfast'];
+                                    $checkinTime = $_POST['checkinTime'];
+                                    $checkoutTime = $_POST['checkoutTime'];
+                                    $image = $_POST['image'];
+
+                                    $q = mysqli_query($conn, "INSERT INTO kamar(jenisKamar,tipeBed,size,kapasitas,jmlhKamar,fasilitas,hargaKamar,hargaBreakfast,checkinTime,checkoutTime,image) VALUES('$jenisKamar','$tipeBed','$size','$kapasitas','$jmlhKamar','$fasilitas','$hargaKamar,'$hargaBreakfast','$checkinTime','$checkoutTime','$image')");
+		
+                                    if ($q) {
+                                        echo "<script>alert('Data Berhasil Di simpan');
+                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
+                                    }else {
+                                        echo "<script>alert('Data Gagal Disimpan!');
+                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
+                                    }
+                                }
+                                ?>
                             </div>
                         </div>
                     </div>
