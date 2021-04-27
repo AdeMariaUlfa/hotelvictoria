@@ -1,6 +1,8 @@
+<?php include 'koneksiAdmin.php'; ?>
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="zxx">
 
+<?php include 'headAdmin.php';?>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -321,6 +323,8 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
+
+
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -351,6 +355,7 @@
             <!-- ============================================================== -->
             <!-- Container fluid  -->
             <!-- ============================================================== -->
+            
             <div class="row">
                     <div class="col-12">
                         <div class="card">
@@ -363,7 +368,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="name" class="form-control"
                                                                 placeholder="masukkan nama lengkap">
                                                         </div>
                                                     </div>
@@ -372,7 +377,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="username" class="form-control"
                                                                 placeholder="masukkan username">
                                                         </div>
                                                     </div>
@@ -381,7 +386,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="masukkan password">
+                                                        <input type="password" name="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" placeholder="masukkan password">
                                                             <small id="passwordHelpBlock" class="form-text text-muted">
                                                             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
                                                             </small>
@@ -393,7 +398,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="noHp" class="form-control"
                                                                 placeholder="masukkan no hp">
                                                         </div>
                                                     </div>
@@ -401,7 +406,7 @@
                                             <label class="col-md-2">Jenis Kelamin </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
-                                                    <select class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+                                                    <select class="custom-select mr-sm-2" name="jk" id="inlineFormCustomSelect">
                                                     <option selected>Choose...</option>
                                                     <option value="1">Perempuan</option>
                                                     <option value="2">Laki-Laki</option>
@@ -414,7 +419,7 @@
                                                 <div class="col-md">
                                                         <form>
                                                             <div class="form-group">
-                                                                <textarea class="form-control" rows="3" placeholder="Text Here..."></textarea>
+                                                                <textarea class="form-control" name="alamat" rows="3" placeholder="Text Here..."></textarea>
                                                                 <small id="textHelp" class="form-text text-muted">Tuliskan Alamat Dengan Lengkap</small>
                                                             </div>
                                                         </form>
@@ -424,21 +429,44 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control"
+                                                            <input type="text" name="email" class="form-control"
                                                                 placeholder="masukkan email">
                                                         </div>
                                                     </div>
                                             </div>
                                         </div>
-                                       
                                     </div>
                                     <div class="form-actions">
                                         <div class="text-right">
-                                            <button type="submit" class="btn btn-info">Submit</button>
+                                            <button type="submit" name="submit" class="btn btn-info">Submit</button>
                                             <button type="reset" class="btn btn-dark">Reset</button>
                                         </div>
                                     </div>
                                 </form>
+
+                                <?php
+ 
+	// Check If form submitted, insert form data into users table.
+	if(isset($_POST['submit'])) {
+		$name = $_POST['name'];
+        $username = $_POST['username'];
+		$password = $_POST['password'];
+		$noHp = $_POST['noHp'];
+        $jk = $_POST['jk'];
+        $alamat = $_POST['alamat'];
+        $email = $_POST['email'];
+		
+		// include database connection file
+		include_once("koneksiAdmin.php");
+				
+		// Insert user data into table
+		$result = mysqli_query($mysqli, "INSERT INTO customer(name,username,password,noHp,jk,alamat,email) VALUES('$name','$username','$password','$noHp','$jk','$alamat','$email')");
+		
+		// Show message when user added
+		echo "customer added successfully. <a href='tabelCustomer.php'>View Customer</a>";
+	}
+	?>
+
                             </div>
                         </div>
                     </div>
@@ -454,10 +482,6 @@
             <!-- ============================================================== -->
             <!-- footer -->
             <!-- ============================================================== -->
-            <footer class="footer text-center text-muted">
-                All Rights Reserved by Adminmart. Designed and Developed by <a
-                    href="https://wrappixel.com">WrapPixel</a>.
-            </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
             <!-- ============================================================== -->
