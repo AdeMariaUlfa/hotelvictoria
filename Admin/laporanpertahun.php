@@ -238,7 +238,7 @@
                                 aria-expanded="false"><i data-feather="file-text" class="feather-icon"></i><span
                                     class="hide-menu">Kamar </span></a>
                             <ul aria-expanded="false" class="collapse  first-level base-level-line">
-                                <li class="sidebar-item"><a href="tabelKamar.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="form-inputs.html" class="sidebar-link"><span
                                             class="hide-menu"> Data Kamar
                                         </span></a>
                                 </li>
@@ -274,7 +274,7 @@
                                             class="hide-menu"> Laporan Bulanan
                                         </span></a>
                                 </li>
-                                <li class="sidebar-item"><a href="laporanpertahun.php" class="sidebar-link"><span
+                                <li class="sidebar-item"><a href="ui-modals.html" class="sidebar-link"><span
                                             class="hide-menu"> Laporan Tahunan </span></a>
                                 </li>
                             </ul>
@@ -313,8 +313,8 @@
                         <div class="d-flex align-items-center">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb m-0 p-0">
-                                    <li class="breadcrumb-item"><a href="index.html" class="text-muted">Menu</a></li>
-                                    <li class="breadcrumb-item text-muted active" aria-current="page">Data Transaksi</li>
+                                    <li class="breadcrumb-item"><a href="index.html" class="text-muted">Home</a></li>
+                                    <li class="breadcrumb-item text-muted active" aria-current="page">Library</li>
                                 </ol>
                             </nav>
                         </div>
@@ -354,6 +354,10 @@
                                     function:<code> $().DataTable();</code>. You can refer full documentation from here
                                     <a href="https://datatables.net/">Datatables</a></h6> -->
                                 <div class="table-responsive">
+                                <td>-Pilih Tanggal-</td><td><input type="year" name="thn_ini" value="<?php echo $thn_ini; ?>"></td>
+                                    <td align="center">
+                                        <a href="index.php?module=hapustransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-danger">Cari</a>
+                                        </td>
                                     <table id="zero_config" class="table table-striped table-bordered no-wrap">
                                         <thead>
                                             <tr>
@@ -369,7 +373,7 @@
                                                 <th>Breakfast</th>
                                                 <th>Total Biaya</th>
                                                 <th>Bukti Bayar</th>
-                                                <th>Aksi</th>
+                                               
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -386,10 +390,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td align="center">
-                                                <a href="index.php?module=edittransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-success">Edit</a>
-                                                <a href="index.php?module=hapustransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-danger">Hapus</a>
-                                                </td>
+                                           
                                             </tr>
                                             <!--  <tr>
                                                 <td>Garrett Winters</td>
@@ -853,9 +854,14 @@
                                     </table>
                                 </div>
                             </div>
+                            <td align="center">
+                          <a href="index.php?module=edittransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-success">Cetak </a>
+                                               
                         </div>
                     </div>
                 </div>
+
+                
                 <!--  -->
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
