@@ -78,36 +78,37 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                           <tr>
-                                           <?php  
-                                            include "koneksiAdmin.php";
-                                            $sql = mysqli_query($conn,"select * from kamar");
-                                            $no=1;
-                                            while($row=mysqli_fetch_array($sql)){
+                                            <tr>
+                                                <?php  
+                                                    include "koneksiAdmin.php";
+                                                    $sql = mysqli_query($conn,"select * from kamar");
+                                                    $no=1;
+                                                    while($row=mysqli_fetch_array($sql)){
 
-                                           ?>
-                                            <td align="center"><?php echo $no; ?></td>
-                                            <td align="center"><?php echo $row['idKamar'] ?> </td>
-                                            <td align="center"><?php echo $row['jenisKamar'] ?> </td>
-                                            <td align="center"><?php echo $row['tipeBed'] ?> </td>
-                                            <td align="center"><?php echo $row['size'] ?> </td>
-                                            <td align="center"><?php echo $row['kapasitas'] ?> </td>
-                                            <td align="center"><?php echo $row['jmlhKamar'] ?> </td>
-                                            <td align="center"><?php echo $row['fasilitas'] ?> </td>
-                                            <td align="center"><?php echo $row['hargaKamar'] ?> </td>
-                                            <td align="center"><?php echo $row['hargaBreakfast'] ?> </td>
-                                            <td align="center"><?php echo $row['checkinTime'] ?> </td>
-                                            <td align="center"><?php echo $row['checkoutTime'] ?> </td>
-                                            <td align="center"><?php echo $row['image'] ?> </td>
-                                            <td align="center">
-                                                <a href="index.php?module=editKamar&idKamar=<?php echo $row['idKamar'];?>"class="btn btn-success">Edit</a>
-                                                <a href="index.php?module=hapusKamar&idKamar=<?php echo $row['idKamar'];?>"class="btn btn-danger">Hapus</a>
+                                                ?>
+                                                <td align="center"><?php echo $no; ?></td>
+                                                <td align="center"><?php echo $row['idKamar']; ?> </td>
+                                                <td align="center"><?php echo $row['jenisKamar']; ?> </td>
+                                                <td align="center"><?php echo $row['tipeBed']; ?> </td>
+                                                <td align="center"><?php echo $row['size']; ?> </td>
+                                                <td align="center"><?php echo $row['kapasitas']; ?> </td>
+                                                <td align="center"><?php echo $row['jmlhKamar']; ?> </td>
+                                                <td align="center"><?php echo $row['fasilitas']; ?> </td>
+                                                <td align="center"><?php echo $row['hargaKamar']; ?> </td>
+                                                <td align="center"><?php echo $row['hargaBreakfast']; ?> </td>
+                                                <td align="center"><?php echo $row['checkinTime']; ?> </td>
+                                                <td align="center"><?php echo $row['checkoutTime']; ?> </td>
+                                                <td align="center"><?php echo $row['image']; ?> </td>
+                                                <td align="center">
+                                                    <a href="index.php?module=editKamar&idKamar=<?php echo $row['idKamar']; ?>" class="btn btn-success">Edit</a>
+                                                    <a href="hapusKamar.php?idKamar=<?php echo $row['idKamar']; ?>" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
                                             <?php 
                                                 $no++;
                                                 }
                                             ?>
+                                        </tbody>
                                     </table>
                                 </div>
                             </div>
