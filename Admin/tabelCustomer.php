@@ -13,6 +13,23 @@
         <!-- ============================================================== -->
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
+
+        
+        
+        <!-- untuk pesan edit dan hapus -->
+        <?php 
+	if(isset($_GET['pesan'])){
+		$pesan = $_GET['pesan'];
+		if($pesan == "input"){
+			echo "Data berhasil di input.";
+		}else if($pesan == "update"){
+			echo "Data berhasil di update.";
+		}else if($pesan == "hapus"){
+			echo "Data berhasil di hapus.";
+		}
+	}
+	?>
+
         <div class="page-wrapper">
             <!-- ============================================================== -->
             <!-- Bread crumb and right sidebar toggle -->
@@ -73,20 +90,30 @@
                                                 <th>aksi</th>
                                             </tr>
                                         </thead>
+                                        
                                         <tbody>
+                                        <?php
+                                        include 'koneksiAdmin.php';
+                                        $no = 1;
+                                        $data = mysqli_query($conn, "select * from customer");
+                                        while($d = mysqli_fetch_array($data)){
+                                            ?>
                                            <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
-                                            <td></td>
+                                            <td><?php echo $d['idCust']; ?></td>
+                                            <td><?php echo $d['name']; ?></td>
+                                            <td><?php echo $d['username']; ?></td>
+                                            <td><?php echo $d['password']; ?></td>
+                                            <td><?php echo $d['noHp']; ?></td>
+                                            <td><?php echo $d['alamat']; ?></td>
+                                            <td><?php echo $d['email']; ?></td>
                                             <td align="center">
                                                 <a href="index.php?module=edittransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-success">Edit</a>
-                                                <a href="index.php?module=hapustransaksi&No_Faktur=<?php echo $row['No_Faktur'];?>"class="btn btn-danger">Hapus</a>
+                                                <a href="tabelCustomer.php?module=hapustransaksi&No_Faktur=<?php echo $pesan['idCust'];?>" class="btn btn-danger">Hapus</a>
                                                 </td>
                                             </tr>
+                                        <?php
+                                        }
+                                        ?>
                                     </table>
                                 </div>
                             </div>
