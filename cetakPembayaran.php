@@ -33,7 +33,7 @@ include "koneksi.php" ;
 
 <?php 
 include 'koneksi.php';
-$sql= mysqli_query($conn,"select * from transaksi where idTransaksi='$_GET[idTransaksi]' and buktiBayar not null");
+$sql= mysqli_query($conn,"SELECT * FROM transaksi WHERE idTransaksi='$_GET[idTransaksi]' AND buktiBayar NOT NULL");
 $no=1;
 while($data=mysqli_fetch_array($sql)){
 

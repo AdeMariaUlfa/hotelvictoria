@@ -10,9 +10,7 @@
         <div class="loader"></div>
     </div>
 
-    <!-- Offcanvas Menu Begin -->
-  
-    <!-- Offcanvas Menu End -->
+
 
     <!-- Header Section Begin -->
    <?php include 'header.php';?>
@@ -58,62 +56,7 @@
             </div>
         </div>
     </section>
-    <!-- Home About Section End -->
-
-    <!-- Services Section Begin -->
    
-    <!-- Services Section End -->
-
-    <!-- Home Room Section Begin -->
-    <!-- <section class="home-room spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h5>OUR ROOM</h5>
-                        <h2>Explore Our Hotel</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="home__room__item set-bg" data-setbg="img/home-room/deluxedouble.jpg">
-                        <div class="home__room__title">
-                            <h4>Deluxe Double</h4>
-                            <h2><sup>Rp.</sup>290.000<span>/day</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="home__room__item set-bg" data-setbg="img/home-room/deluxetwin.jpg">
-                        <div class="home__room__title">
-                            <h4>Deluxe Twin</h4>
-                            <h2><sup>Rp.</sup>290.000<span>/day</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="home__room__item set-bg" data-setbg="img/home-room/suitedouble.jpg">
-                        <div class="home__room__title">
-                            <h4>Suite Double</h4>
-                            <h2><sup>Rp.</sup>490.000<span>/day</span></h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 p-0">
-                    <div class="home__room__item set-bg" data-setbg="img/home-room/victoriasuite.jpg">
-                        <div class="home__room__title">
-                            <h4>Victoria Suite</h4>
-                            <h2><sup>Rp.</sup>690.000<span>/day</span></h2>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section> -->
     <?php include 'room.php';?>
     <!-- Home Room Section End -->
 
@@ -138,10 +81,6 @@
     <!-- Gallery Section Begin -->
     <?php include 'galeri.php';?>
     <!-- Gallery Section End -->
-
-    <!-- Latest Blog Section Begin -->
-    \
-    <!-- Latest Blog Section End -->
 
     <!-- Footer Section Begin -->
     <?php include 'footer.php';?>

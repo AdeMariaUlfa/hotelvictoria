@@ -1,5 +1,5 @@
 <?php
-include 'koneksi.php';
+
 if(@$_SESSION['username']!=""){
     ?>
     <!DOCTYPE html>
@@ -41,7 +41,7 @@ if(@$_SESSION['username']!=""){
 			<div class="container">
 				<div class="row">
 					<div class="tabel pembayaran">
-						<h2>Tabel Pembayaran<h2>
+						<h2 style="">Tabel Pembayaran<h2>
                         <table width="100%" border="1" class="table table-bordered table-striped">
                             <tr> 
                                 <th>No</th>
@@ -76,9 +76,8 @@ if(@$_SESSION['username']!=""){
 include "koneksi.php";
 $sql = mysqli_query($conn, "SELECT idTransaksi,totalBiaya,buktiBayar FROM transaksi where idCust='$_GET[idCust]' ");
 $no=1;
-$totalBiaya=0;
-while($row=mysqli_fetch_array($sql)){
-    // $totalBiaya
+
+while($data=mysqli_fetch_array($sql)){
 ?>
 <tr>
 <td align="center"><?php echo $no; ?></td>
@@ -94,9 +93,17 @@ while($row=mysqli_fetch_array($sql)){
 <a href="index.php?module=cetakPembayaran&idTransaksi=<?php echo $row['idTransaksi'];?>"class="btn btn-success">Cetak</a>
 </td>
 </tr>
+
+
 <?php
 $no++;
 }
-}
 ?>
 </table>
+<?php
+}else{
+
+	 echo "<script>alert('Silahkan Login Terlebih Dahulu atau registrasi terlebih dahulu!');
+           window.location='index.php?page=login';</script>";
+}
+?>

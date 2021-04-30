@@ -1,4 +1,3 @@
-<?php include 'koneksi.php'; ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -46,7 +45,7 @@ if(isset($_POST["submit"])){//jika tombol login di klik
 	if($username!="" && $password!=""){
 		
 		// cek kecocokan username dan password
-		$em = mysqli_query($conn, "select * from customer where password = '$password' AND username = '$username'");
+		$em = mysqli_query($conn, "SELECT * FROM customer WHERE password = '$password' AND username = '$username'");
 		$data = mysqli_fetch_array($em);
 		
 		if(empty($data)) // username atau password salah
@@ -66,7 +65,7 @@ if(isset($_POST["submit"])){//jika tombol login di klik
 			$_SESSION["email"]=$data["email"];
 			
 			// arahkan ke halaman index pasca login
-			echo "<script> alert('selamat datang ".$_SESSION['name']."'); window.location.href='index.php'; </script>";
+			echo "<script> alert('Selamat datang ".$_SESSION['name']."'); window.location.href='booking.php'; </script>";
 		}
 	}
 	else

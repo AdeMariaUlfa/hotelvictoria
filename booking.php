@@ -1,12 +1,6 @@
 <?php 
-include 'koneksi.php';
 if(@$_SESSION['username']!=""){
     ?>
-    <?php
-    if (!isset($_GET['konf'])){
-        ?>
-        
-
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'header.php';?>
@@ -16,11 +10,6 @@ if(@$_SESSION['username']!=""){
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
-    <!-- Offcanvas Menu Begin -->
-   
-    <!-- Offcanvas Menu End -->
-
      <!-- Header Section Begin -->
      <?php include 'header.php';?>
     <!-- Header Section End -->
@@ -109,20 +98,11 @@ if(@$_SESSION['username']!=""){
 								<span class="form-label">Phone</span>
 								<input class="form-control" type="tel" id="noHp" value="noHp"  placeholder="Enter your phone number">
 							</div>
-                            <div class="row">
-                            <div class="col-md-12 form-group">
-                                <label class="text-black font-weight-bold" for="breakfast">With Breakfast?</label>
-                                <select required name="breakfast" id="breakfast" value="breakfast" class="form-control" >
-                                <option value=yes>Yes</option>
-                                <option value=no>No</option>
-                                <?php
-                               if($value==yes){
-                                   $sql = mysqli_query($conn, "SELECT breakfast FROM kamar where idkamar = 'kamar'");
-                               }
-                                ?>
-                                </select>
-                            </div>
-                            </div>
+                            <div action="" method="get">
+					      <p>With Breakfast ? </p>
+					      <p><input type='radio' name='breakfast' value='yes' />Yes, please!</p>
+					      <p><input type='radio' name='breakfast' value='no' />No, thank you!</p>
+					 </div>  
                             <div class="row">
                                 <div class="col-md-6 form-group">
                                     <input type="submit" value="Reservasi Sekarang" name="submit" class="btn btn-primary text-white py-3 px-5 font-weight-bold">
@@ -150,7 +130,7 @@ if(@$_SESSION['username']!=""){
 </body>
 </html>
 <?php
-    } 
+    
     }else{
         echo "<script>alert('Silahkan Login Terlebih Dahulu atau registrasi terlebih dahulu!');
         window.location='login.php';</script>";
