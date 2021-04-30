@@ -41,14 +41,14 @@
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title">Masukkan Data-Data Berikut</h4>
-                                <form action="" method="POST">
+                                <form action="inputKamar.php" method="POST">
                                     <div class="form-body">
                                         <div class="form-group row">
                                             <label class="col-md-2">Jenis Kamar </label>
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" name = "jenisKamar">
+                                                            <input type="text" class="form-control" name = "jenisKamar" placeholder="masukkan jenis kamar">
                                                         </div>
                                                     </div>
                                             </div>
@@ -56,7 +56,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="text" class="form-control" name = "tipeBed" >
+                                                            <input type="text" class="form-control" name = "tipeBed" placeholder="masukkan tipe bed" >
                                                         </div>
                                                     </div>
                                             </div>
@@ -64,7 +64,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" name = "size">
+                                                            <input type="number" class="form-control" name = "size" placeholder="masukkan size">
                                                         </div>
                                                     </div>
                                             </div>
@@ -72,7 +72,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" name = "kapasitas">
+                                                            <input type="number" class="form-control" name = "kapasitas" placeholder="masukkan kapasitas">
                                                         </div>
                                                     </div>
                                             </div>
@@ -80,7 +80,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" name = "jmlhKamar">
+                                                            <input type="number" class="form-control" name = "jmlhKamar" placeholder="masukkan jumlah kamar">
                                                         </div>
                                                     </div>
                                             </div>
@@ -89,7 +89,7 @@
                                                 <div class="col-md">
                                                         <form>
                                                             <div class="form-group">
-                                                                <textarea class="form-control" name = "fasilitas" rows="3" placeholder="Text Here..."></textarea>
+                                                                <textarea class="form-control" name = "fasilitas" rows="3" placeholder="Text Here..." placeholder="masukkan fasilitas"></textarea>
                                                             </div>
                                                         </form>
                                                 </div>
@@ -98,7 +98,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" name = "hargaKamar">
+                                                            <input type="number" class="form-control" name = "hargaKamar" placeholder="masukkan harga kamar">
                                                         </div>
                                                     </div>
                                             </div>
@@ -106,7 +106,7 @@
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
-                                                            <input type="number" class="form-control" name = "hargaBreakfast">
+                                                            <input type="number" class="form-control" name = "hargaBreakfast" placeholder="masukkan harga breakfast">
                                                         </div>
                                                     </div>
                                             </div>
@@ -127,6 +127,14 @@
                                                     </div>
                                             </div>
                                             <label class="col-md-2">Image </label>
+                                            <!-- <div class="col-md-10">
+                                                    <div class="col-md">
+                                                        <div class="custom-file mb-2">
+                                                            <input type="file" class="custom-file-input" id="customFile" name="image">
+                                                            <label class="custom-file-label" for="customFile">Choose file</label>
+                                                        </div>
+                                                    </div>
+                                            </div> -->
                                             <div class="col-md-10">
                                                     <div class="col-md">
                                                         <div class="form-group">
@@ -135,42 +143,12 @@
                                                     </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="form-actions">
                                         <div class="text-right">
-                                            <input type="submit" class="btn btn-info" name = "submit" value = "SIMPAN">
-                                            <input type="reset" class="btn btn-dark" name = "reset" value = "RESET">
+                                            <input type="submit" name = "submit" class="btn btn-info" value = "SIMPAN">
+                                            <input type="reset" name = "reset" class="btn btn-dark" value = "RESET">
                                         </div>
                                     </div>
                                 </form>
-
-                                <?php
-                                // Check If form submitted, insert form data into users table.
-                                include "koneksiAdmin.php";
-                                if(isset($_POST['submit'])) {
-                                    $jenisKamar = $_POST['jenisKamar'];
-                                    $tipeBed = $_POST['tipeBed'];
-                                    $size = $_POST['size'];
-                                    $kapasitas = $_POST['kapasitas'];
-                                    $jmlhKamar = $_POST['jmlhKamar'];
-                                    $fasilitas = $_POST['fasilitas'];
-                                    $hargaKamar = $_POST['hargaKamar'];
-                                    $hargaBreakfast = $_POST['hargaBreakfast'];
-                                    $checkinTime = $_POST['checkinTime'];
-                                    $checkoutTime = $_POST['checkoutTime'];
-                                    $image = $_POST['image'];
-
-                                    $q = mysqli_query($conn, "INSERT INTO kamar(jenisKamar,tipeBed,size,kapasitas,jmlhKamar,fasilitas,hargaKamar,hargaBreakfast,checkinTime,checkoutTime,image) VALUES('$jenisKamar','$tipeBed','$size','$kapasitas','$jmlhKamar','$fasilitas','$hargaKamar,'$hargaBreakfast','$checkinTime','$checkoutTime','$image')");
-		
-                                    if ($q) {
-                                        echo "<script>alert('Data Berhasil Di simpan');
-                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
-                                    }else {
-                                        echo "<script>alert('Data Gagal Disimpan!');
-                                        window.location.href='indexAdmin.php?module=tabelkamar';</script>";
-                                    }
-                                }
-                                ?>
                             </div>
                         </div>
                     </div>
@@ -222,6 +200,35 @@
     <!--This page plugins -->
     <script src="assets/extra-libs/datatables.net/js/jquery.dataTables.min.js"></script>
     <script src="dist/js/pages/datatable/datatable-basic.init.js"></script>
+
+    <?php
+        // Check If form submitted, insert form data into users table.
+        include "koneksiAdmin.php";
+        if(isset($_POST['submit'])) {
+        $jenisKamar = $_POST['jenisKamar'];
+        $tipeBed = $_POST['tipeBed'];
+        $size = $_POST['size'];
+        $kapasitas = $_POST['kapasitas'];
+        $jmlhKamar = $_POST['jmlhKamar'];
+        $fasilitas = $_POST['fasilitas'];
+        $hargaKamar = $_POST['hargaKamar'];
+        $hargaBreakfast = $_POST['hargaBreakfast'];
+        $checkinTime = $_POST['checkinTime'];
+        $checkoutTime = $_POST['checkoutTime'];
+        $image = $_POST['image'];
+
+        $q = mysqli_query($conn, "INSERT INTO kamar(jenisKamar,tipeBed,size,kapasitas,jmlhKamar,fasilitas,hargaKamar,hargaBreakfast,checkinTime,checkoutTime,image) VALUES('$jenisKamar','$tipeBed','$size','$kapasitas','$jmlhKamar','$fasilitas','$hargaKamar,'$hargaBreakfast','$checkinTime','$checkoutTime','$image')");
+            
+        if ($q) {
+            echo "<script>alert('Data Berhasil Di simpan');
+                window.location.href='tabelKamar.php';</script>";
+        }
+        else {
+            echo "<script>alert('Data Gagal Disimpan!');
+                window.location.href='tabelKamar.php';</script>";
+        }
+    }
+ ?>
 </body>
 
 </html>
